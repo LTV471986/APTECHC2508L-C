@@ -195,6 +195,92 @@ int main(){
 	diemTB = (diemToan + diemHoa + diemLy)/3;
 	printf("Diem Trung Binh 3 mon cua ban la:%.2f \n", diemTB);
 	
+	//Bai 26: Nhap vao mot ky tu, in ra ma ASCII cua ky ty do.
+	//Kieu du lieu: char (Ky tu).
+	char kyTu;
+	printf("Bai 26: Ky tu la:");
+	scanf(" %c",&kyTu);
+	printf("Ma ASCII cua ky tu do la:%d \n", kyTu);
+	
+	
+	//Bai 27: Nhap vao mot so nguyen, in ra ky tu tuong ung trong bang ASCII.
+	//Kieu du lieu: int (So nguyen).
+	int soNguyen;
+	printf("Bai 27: So nguyen la:");
+	scanf("%d",&soNguyen);
+	printf("Ma ASCII cua so Nguyen do la:%c \n", soNguyen);
+	
+	//Bai 28: Nhap vao mot KY TU, in ra KY TU LIEN SAU trong bang ASCII.
+	//Kieu du lieu: char (Ky tu).
+	char kyTu1;
+	printf("Bai 28: Ky tu dau tien la:");
+	scanf(" %c",&kyTu1);
+	printf("Ky tu sau do la:%c \n", kyTu1 + 1);
+	
+	//Bai 29: Nhap vao mot so nguyen, in ra binh phuong va lap phuong.
+	int sOnguyen;
+	int binhPhuong;
+	int lapPhuong;
+	printf("Bai 29: So nguyen la:");
+	scanf("%d",&sOnguyen);
+	binhPhuong = sOnguyen * sOnguyen;
+	lapPhuong = sOnguyen * sOnguyen * sOnguyen;
+	printf("Binh phuong la:%d \n", binhPhuong);
+	printf("Lap phuong la:%d \n", lapPhuong);
+	
+	//Bai 30: Nhap vao so gio va phut, in ra tong so phut.
+	int gio;
+	int phut;
+	int tonggp;
+	printf("Bai 30: So gio la:");
+	scanf("%d",&gio);
+	printf("So phut la:");
+	scanf("%d",&phut);
+	tonggp = gio*60 + phut;
+	printf("Tong so phut la:%d \n",tonggp);
+	
+	
+	//Bai 31: Nhap vao so giay, in ra dinh dang gio:phut:giay.
+	//1 gio = 3600 giay.
+	//1 phut = 60 giay.
+	
+	int second;
+	int minu;
+	int hour;
+	printf("Bai 31: So giay la:");
+	scanf("%d",&second);
+	hour = second/3600;
+	minu = (second % 3600)/60;
+	second = second % 60;
+	printf("Thoi gian la: %d gio: %d phut: %d giay \n", hour, minu, second);
+	
+	//Bai 32: Nhap vao can nang va chieu cao, in ra chi so BMI.
+	float kg;
+	float height;
+	float BMI;
+	printf("Bai 32: Can nang cua ban la: ");
+	scanf("%f",&kg);
+	printf("Chieu cao cua ban la: ");
+	scanf("%f",&height);
+	BMI = kg/(height*height);
+	printf("Chi so BMI cua ban la:%lf \n",BMI);
+	
+	//Bai 33: Nhap vao 2 so nguyen, in ra so lon hon.
+	int ab;
+	int ba;
+	printf("Bai 33 So nguyen thu 1 la: ");
+	scanf("%d",&ab);
+	printf("So nguyen thu 2 la:");
+	scanf("%d",&ba);
+	
+	if(ab > ba){
+		printf("So lon hon la:%d \n",ab);
+	}else if(ab<ba){
+		printf("So lon hon la:%d \n",ba);
+	}else{
+		printf("Hai so bang nhau. \n");
+	}
+
 	return 0;
 }
 
