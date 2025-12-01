@@ -61,14 +61,15 @@ int main(){
 	
 	
 	//Bai 10: Nhap vao ten cua ban (dung scanf("%s", ...)) va in ra.
-//	char mynamE[50];
-//	printf("Bai 10: Ten cua ban la:");
-//	scanf("%49s", mynamE);
-//	printf("Ten cua toi la:%s \n", mynamE);
+	char mynamE[50];
+	printf("Bai 10: Ten cua ban la:");
+	scanf("%s", mynamE);
+	printf("Ten cua toi la:%s \n", mynamE);
 	
 	//Bai 11: Nhap vao ten day du (dung fgets) va in ra.
 	char anotherName[100];
 	printf("Bai 11: Ho va ten:");
+	scanf("%s",anotherName);
 	fgets(anotherName, sizeof(anotherName),stdin);
 	
 	anotherName[strcspn(anotherName, "\n")] = '\0';
@@ -130,7 +131,7 @@ int main(){
 	thuongnguyen = l/m;
 	printf("Thuong nguyen cua l va m la:%d \n", thuongnguyen);
 	
-	//Bai 19: Nhap vao hai so nguyen, in ra thuong cua chung (chia thuc).
+	//Bai 18: Nhap vao hai so nguyen, in ra thuong cua chung (chia thuc).
 	int n;
 	int o;
 	double thuongthuc;
@@ -214,6 +215,14 @@ int main(){
 	
 	
 	//Bai 25: Nhap vao ten va diem trung binh, in ra ket qua: " Ban A co diem TB = ...".
+	char nhapTen[50];
+	float dtb;
+	printf("Nhap ten ban vao:");
+	fgets(nhapTen,sizeof(nhapTen),stdin);
+	nhapTen[strcspn(nhapTen, "\n")] =  '\0';
+	printf("Nhap Diem Trung Binh la:");
+	scanf("%f", &dtb);
+	printf("Ban %s co Diem trung binh la %.2f \n",nhapTen,dtb);
 	
 	
 	//Bai 26: Nhap vao mot ky tu, in ra ma ASCII cua ky ty do.
