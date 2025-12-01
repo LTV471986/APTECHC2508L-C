@@ -4,6 +4,8 @@
 //Bai 01: In ra dong chu "Hello, World!".
 //Khai bao thu vien <stdio.h>, co the dung dau <> hoac " ".
 #include <stdio.h>
+#include <math.h>
+#include <string.h>
 
 int main(){
 	//Bai 01: In ra dong chu "Hello, World!".	
@@ -56,6 +58,21 @@ int main(){
 	printf("Bai 09: NHAP mot so thuc:");
 	scanf("%f",&e);
 	printf("Gia tri so thuc E la:%f \n",e * 2);
+	
+	
+	//Bai 10: Nhap vao ten cua ban (dung scanf("%s", ...)) va in ra.
+//	char mynamE[50];
+//	printf("Bai 10: Ten cua ban la:");
+//	scanf("%49s", mynamE);
+//	printf("Ten cua toi la:%s \n", mynamE);
+	
+	//Bai 11: Nhap vao ten day du (dung fgets) va in ra.
+	char anotherName[100];
+	printf("Bai 11: Ho va ten:");
+	fgets(anotherName, sizeof(anotherName),stdin);
+	
+	anotherName[strcspn(anotherName, "\n")] = '\0';
+	printf("Ho va ten day du cua toi la: %s\n", anotherName);
 	
 	
 	//Bai 12: In ra gia tri so PI voi 2 chu so thap phan
@@ -195,6 +212,10 @@ int main(){
 	diemTB = (diemToan + diemHoa + diemLy)/3;
 	printf("Diem Trung Binh 3 mon cua ban la:%.2f \n", diemTB);
 	
+	
+	//Bai 25: Nhap vao ten va diem trung binh, in ra ket qua: " Ban A co diem TB = ...".
+	
+	
 	//Bai 26: Nhap vao mot ky tu, in ra ma ASCII cua ky ty do.
 	//Kieu du lieu: char (Ky tu).
 	char kyTu;
@@ -280,7 +301,66 @@ int main(){
 	}else{
 		printf("Hai so bang nhau. \n");
 	}
-
+	
+	//Bai 34: Nhap vao 3 so nguyen, in ra so nho nhat.
+	
+	
+	//Bai 35:Nhap cao ho, ten dem, ten -> in ra day du.
+	
+	//Bai 36: Nhap vao 3 canh tam giac, in ra chu vi.
+	int canh1, canh2, canh3;
+	int ChuviTamgiac;
+	
+	printf("Bai 36: Canh thu nhat la: ");
+	scanf("%d", &canh1);
+	printf("Canh thu hai la: ");
+	scanf("%d", &canh2);
+	printf("Canh thu ba la: ");
+	scanf("%d", &canh3);
+	
+	ChuviTamgiac = canh1 + canh2 + canh3;
+	printf("Chu vi hinh tam giac la: %d \n", ChuviTamgiac);
+	
+	//Bai 37: Nhap vao 3 canh tam giac, in ra dien tich (cong thuc Heron).
+	int canh4, canh5, canh6;
+	int nuaChuvi, DientichTamgiac;
+	printf("Bai 37: Canh thu nhat la: ");
+	scanf("%d", &canh4);
+	printf("Canh thu hai la: ");
+	scanf("%d", &canh5);
+	printf("Canh thu ba la: ");
+	scanf("%d", &canh6);
+	nuaChuvi = (canh4 + canh5 + canh6)/2;
+	DientichTamgiac = sqrt(nuaChuvi*(nuaChuvi - canh4)*(nuaChuvi - canh5)*(nuaChuvi - canh6));
+	printf("Dien tich hinh tam gia la: %d", DientichTamgiac);
+	
+	//Bai 38: Nhap vao mot so nguyen co 2 chu so, in ra hang chuc (n/10) va hang don vi (n%10).
+	
+	
+	//Bai 39: Nhap vao mot so nguyen co 3 chu so, in ra tong cac chu so.
+	
+	//Bai 40: Nhap vao mot so nguyen, in ra dao nguoc cua no.
+	
+	//Bai 41: Nhap vao mot ky tu thuong, in ra ky tu hoa tuong ung.
+	
+	//Bai 42: Nhap vao mot ky tu hoa, in ra ky tu thuong tuong ung.
+	
+	//Bai 43: Nhap vao mot chuoi (ho va ten), in ra tung ky tu tren moi dong.
+	
+	//Bai 44: Nhap vao mot cau (dung fgets), in ra lai.
+	
+	//Bai 45: Nhap vao diem cua 5 sinh vien, in ra danh sach diem.
+	
+	//Bai 46: Nhap cao thong tin 1 sinh vien: ten, tuoi, diem TB -> in ra bang thong tin.
+	
+	//Bai 47: Nhap vao mot so nguyen n. in ra bang cuu chuong cua n.
+	
+	//Bai 48: Nhap vao nhiet do C, in ra nhiet do F.
+	
+	//Bai 49: Nhap vao dien do F, in ra nhiet do C.
+	
+	//Bai 50: Nhap vao 2 so vaf 1 ky tu toan tu (+ - * /), in ra ket qua phep toan tuong ung.
 	return 0;
+	
 }
 
