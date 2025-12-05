@@ -9,23 +9,27 @@
 #include <math.h>
 
 int main(){
-//	int thueBao = 25000;
-//	int phutGoi, cuocDT;
-//	
-//	printf("Phut goi cua ban la: ");
-//	scanf("%d", &phutGoi);
-//	
-//	if(phutGoi > 0 && phutGoi <= 10){
-//		cuocDT= thueBao + (600 * phutGoi);
-//		printf("Cuoc thue bao cua ban la: %d", cuocDT);
-//	}else if(phutGoi > 10 && phutGoi <= 50 ){
-//		cuocDT= thueBao + (600 * 10) + (400 * (phutGoi - 10));
-//		printf("Cuoc thue bao cua ban la: %d", cuocDT);
-//	}else {
-//		cuocDT = thueBao + (600 * 10) + (400 * 50) + (200 * (phutGoi - 60));
-//		printf("Cuoc thue bao cua ban la: %d", cuocDT);
-//	}
-//	
+	int thueBao = 25000;
+	int phutGoi, cuocDT;
+	
+	printf("Phut goi cua ban la: ");
+	scanf("%d", &phutGoi);
+	
+	if (phutGoi >= 0){
+		if(phutGoi <= 10){
+			cuocDT= thueBao + (600 * phutGoi);
+			printf("Cuoc thue bao cua ban la: %d", cuocDT);
+		}else if(phutGoi > 10 && phutGoi <= 50 ){
+		cuocDT= thueBao + (600 * 10) + (400 * (phutGoi - 10));
+		printf("Cuoc thue bao cua ban la: %d", cuocDT);
+		}else {
+		cuocDT = thueBao + (600 * 10) + (400 * 50) + (200 * (phutGoi - 60));
+		printf("Cuoc thue bao cua ban la: %d", cuocDT);
+		}
+	}else{
+		printf("So phut cua ban khong hop le");
+	}
+	
 //BAI 07:
 //	int doanhSo, hoaHong;
 //	printf("Doanh so cua cong ty la: ");
@@ -46,16 +50,22 @@ int main(){
 //	printf("Luong cua ban la: ");
 //	scanf("%d", &luong);
 //	
-//	if(luong <= 7000000){
-//		thucLinh = luong - (luong * 0.1);
-//		printf("So tien ban duoc nhan la:%d", thucLinh);
-//	}else if (luong > 7000000 && luong < 15000000){
-//		thucLinh = luong - (luong * 0.2);
-//		printf("So tien ban duoc nhan la:%d", thucLinh);
+//	if(luong > 0){
+//		
+//		if(luong < 7000000){
+//			thucLinh = luong - (luong * 0.1);
+//			printf("So tien ban duoc nhan la:%d", thucLinh);
+//		}else if (luong >= 7000000 && luong <= 15000000){
+//			thucLinh = luong - (luong * 0.2);
+//			printf("So tien ban duoc nhan la:%d", thucLinh);
+//		}else {
+//			thucLinh = luong- (luong * 0.3);
+//			printf("So tien ban duoc nhan la:%d", thucLinh);
+//		}
 //	}else {
-//		thucLinh = luong- (luong * 0.3);
-//		printf("So tien ban duoc nhan la:%d", thucLinh);
+//		printf("Luong ban nhap khong hop le");
 //	}
+//	
 //BAI 05: Viet chuong trinh giai phuong trinh bac 2: ax2 + bx + c = 0.	
 //	float a, b , c, Delta;
 //	float x, x1, x2, x3;
@@ -122,33 +132,40 @@ int main(){
 //	}
 	
 //BAI 04:
-//	int a, b, c;
-//	int p, S;
+//	double a, b, c;
+//	double p, S;
 //	printf("Nhap 3 canh tam giac lan luot la: ");
-//	scanf("%d%d%d", &a, &b, &c);
+//	scanf("%lf%lf%lf", &a, &b, &c);
 //	
-//	if(a + b > c && a + c > b && b + c > a){
+//	if(a + b > c || a + c > b || + c > a){ //Thoa 1 trong 3 dieu kien la duoc khong can thoa ca 3 dieu kien.
 //		p = (a + b + c)/2;
 //		S = sqrt(p * (p - a) * (p - b) * (p - c));
-//		printf(" Dien tich cua hinh tam giac la: %d", S);
+//		printf(" Dien tich cua hinh tam giac la: %.2lf", S);
 //	}else {
 //		printf("Khong ton tai tam giac");
 //	}
 
 //BAI 08:
-	int thang;
-	printf("Nhap thang: ");
-	scanf("%d", &thang);
-	
-	if(thang == 1 || thang == 3 || thang == 5 || thang == 7 || thang == 8 || thang == 10 || thang == 12) {
-		printf("Thang co 31 ngay");
-	}else if(thang == 4 || thang == 6 || thang == 9 || thang == 11){
-		printf("Thang co 30 ngay");
-	}else if(thang == 2){
-		printf("Thang co 28 ngay");
-	}else{
-		printf("Thang khong hop le");
-	}
-		
+//	int thang, nam;
+//	printf("Nhap thang: ");
+//	scanf("%d", &thang);
+//	
+//	
+//	if(thang == 1 || thang == 3 || thang == 5 || thang == 7 || thang == 8 || thang == 10 || thang == 12) {
+//		printf("Thang co 31 ngay");
+//	}else if(thang == 4 || thang == 6 || thang == 9 || thang == 11){
+//		printf("Thang co 30 ngay");
+//	}else if(thang == 2){	//Kiem tra nam nhuan:
+//		printf("Nhap nam: ");
+//		scanf("%d", &nam);
+//			if(nam % 400 == 0 || (nam % 4 == 0 && nam % 100 != 0)){
+//				printf("Thang 2 co 29 ngay");
+//			} else {
+//				printf("Thang co 28 ngay");
+//			}
+//	}else{
+//		printf("Thang khong hop le");
+//	}
+//		
 	return 0;
 }
